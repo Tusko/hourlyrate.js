@@ -1,0 +1,364 @@
+/* ===================================== https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos ===================================== */
+/*
+    Flexbox grid @mixin
+
+    EXAMPLE
+
+    .flexbox {
+        @include flexGrid(5, 4%);
+        > div {
+            margin-bottom: .4em;
+            background: #333;
+            padding: .8em;
+            color: #fff;
+        }
+    }
+*/
+/* line 398, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_flexbox.scss */
+html > body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* line 419, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_flexbox.scss */
+html > body {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center; }
+
+/* line 428, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_flexbox.scss */
+html > body {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+/* Usage
+    @include add-font('FontName', 'fontfilename', 400);
+
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        @include add-svg-font('FontName', 'fontfilename', 400);
+    }
+*/
+/* line 189, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/__mixins.scss */
+.ani {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+/* line 2, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 1px;
+  padding: 0;
+  margin: 0; }
+
+/* line 10, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 23, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+audio,
+canvas,
+video,
+progress {
+  vertical-align: baseline;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/* line 32, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+audio:not([controls]),
+[hidden],
+template {
+  display: none;
+  height: 0; }
+
+/* line 38, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+mark {
+  background: none;
+  color: inherit; }
+
+/* line 42, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline; }
+
+/* line 49, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+sup {
+  top: -.5em; }
+
+/* line 52, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+sub {
+  bottom: -.5em; }
+
+/* line 55, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+pre {
+  overflow: auto; }
+
+/* line 58, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* line 65, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
+input[type='color'],
+input[type='url'],
+input[type='image'],
+input[type='tel'],
+input[type='submit'],
+input[type='file'],
+input[type='range'],
+input[type='reset'],
+input[type='button'],
+input[type='search'],
+button,
+textarea {
+  -webkit-appearance: none;
+  outline: 0 none; }
+
+/* line 84, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+strong {
+  font-weight: 700; }
+
+/* line 87, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+input[type="submit"],
+button {
+  cursor: pointer; }
+
+/* line 91, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+textarea,
+button,
+a,
+input {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+/* line 98, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+[data-defer] {
+  background-color: #f5f5f5; }
+
+/* line 102, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 106, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+.hidden {
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  border: 0;
+  -webkit-appearance: none; }
+
+/* line 117, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+.fullframe {
+  height: 0;
+  margin: 0 0 20px;
+  overflow: hidden;
+  padding-bottom: 56.5%;
+  position: relative;
+  z-index: 0; }
+  /* line 125, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+  .fullframe > iframe, .fullframe > object, .fullframe > embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1; }
+
+/* line 136, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto; }
+
+/* line 142, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+p {
+  margin-bottom: 20px; }
+
+/* line 146, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+ul,
+ol {
+  list-style: none; }
+
+/* line 152, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+.clear {
+  clear: both; }
+
+/* line 125, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/__mixins.scss */
+.cfx:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+/* line 160, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+html[xmlns] .cfx {
+  display: block; }
+
+/* line 164, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+* html .cfx {
+  height: 1%; }
+
+/* line 168, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+a {
+  color: #0000EE;
+  outline: 0 none; }
+  /* line 171, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+  a:hover {
+    text-decoration: none; }
+  /* line 174, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+  a > img {
+    border: 0; }
+
+/* line 178, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+.alignleft, .al {
+  float: left; }
+
+/* line 179, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+.alignright, .ar {
+  float: right; }
+
+/* line 180, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+.aligncenter, .ac {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 181, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+img.aligncenter, img.ac {
+  display: block; }
+
+/* line 184, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+::-moz-selection,
+::selection {
+  color: #fff;
+  background: #3399ff; }
+
+/* line 190, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+:focus {
+  outline: none; }
+
+/* line 194, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/components/_reset.scss */
+::-moz-focus-inner {
+  border: 0; }
+
+/* line 4, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+html {
+  font: 400 15px/1.4 "Raleway", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none; }
+  /* line 11, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+  html > body {
+    position: relative;
+    min-height: 100vh;
+    background: #00BCD4;
+    color: #333;
+    margin: 0 auto; }
+
+/* line 23, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1;
+  color: #00BCD4; }
+
+/* line 31, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+h2 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 125%; }
+
+/* line 38, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+form {
+  position: relative;
+  background: #fff;
+  width: 640px;
+  margin: 0 auto;
+  max-width: 96%;
+  padding: 40px;
+  z-index: 0; }
+  /* line 47, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+  form > p + p {
+    margin-top: 40px; }
+  /* line 51, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+  form label {
+    font-weight: 700;
+    display: block; }
+  /* line 55, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"],
+  form input[type="tel"],
+  form input[type="password"],
+  form textarea {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    font: 300 14px "Raleway", "Arial", sans-serif;
+    background: none;
+    padding: 0 10px;
+    display: block;
+    margin: 0 auto;
+    height: 32px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #b7b7b7; }
+    /* line 71, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+    form input[type="text"]:focus,
+    form input[type="number"]:focus,
+    form input[type="email"]:focus,
+    form input[type="tel"]:focus,
+    form input[type="password"]:focus,
+    form textarea:focus {
+      border-bottom-color: #00BCD4; }
+  /* line 75, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+  form textarea {
+    -webkit-transition: none;
+    transition: none;
+    padding-top: 0.1em;
+    line-height: 32px;
+    overflow: hidden;
+    min-height: 32px;
+    resize: none; }
+  /* line 83, /Users/tuskotrush/Google Drive/localhost/hourlyrate.js/css/style.scss */
+  form #result {
+    font: 700 32px/1 "Raleway", "Arial", sans-serif;
+    text-align: center;
+    display: block; }
+
+/*# sourceMappingURL=style.css.map */

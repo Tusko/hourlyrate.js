@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hourlyrate.js</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <form>
+        <h1>Hourlyrate.js</h1>
+        <h2>Convert your hours to dollars</h2>
+        <p>
+            <label for="hourly-rate">Enter your hourly rate</label>
+            <input id="hourly-rate" name="rate" type="number" placeholder="Hourly Rate" value="0" />
+        </p>
+        <p>
+            <label for="hours">Enter hours worked</label>
+            <input id="hours" name="hours" type="number" placeholder="Hours" value="0" />
+        </p>
+        <p>
+            <label for="minutes">Enter minutes worked</label>
+            <input id="minutes" name="minutes" type="number" placeholder="Minutes" value="0" />
+        </p>
+        <mark id="result">$ <span>0</span></mark>
+    </form>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js"></script>
+<script defer src="init.js"></script>
+</body>
+</html>

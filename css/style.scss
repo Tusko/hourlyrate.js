@@ -1,0 +1,88 @@
+@import 'components/_mixins',
+        'components/reset';
+
+html {
+    font: 400 #{$font-base}/1.4 $font;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    > body {
+        @extend %justifycontentcenter;
+        @extend %alignitemscenter;
+        position: relative;
+        min-height: 100vh;
+        background: $blue;
+        color: $default;
+        margin: 0 auto;
+        @extend %flex;
+    }
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1;
+    color: $blue;
+}
+
+h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 125%;
+}
+
+form {
+    position: relative;
+    background: $white;
+    width: $container;
+    margin: 0 auto;
+    max-width: 96%;
+    padding: 40px;
+    z-index: 0;
+    > p {
+        & + p {
+            margin-top: 40px;
+        }
+    }
+    label {
+        font-weight: 700;
+        display: block;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea {
+        @include border-radius(0);
+        font: 300 14px $font;
+        background:  none;
+        padding: 0 10px;
+        display: block;
+        margin: 0 auto;
+        height: 32px;
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid #b7b7b7;
+        &:focus {
+            border-bottom-color: #00BCD4
+        }
+    }
+    textarea {
+        @include transition(none);
+        padding-top: 0.1em;
+        line-height: 32px;
+        overflow: hidden;
+        min-height: 32px;
+        resize: none;
+    }
+    #result {
+        font: 700 32px/1 $font;
+        text-align: center;
+        display: block;
+    }
+}
