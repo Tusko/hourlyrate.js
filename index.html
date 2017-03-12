@@ -12,15 +12,15 @@
         <h2>Convert your hours to dollars</h2>
         <p>
             <label for="hourly-rate">Enter your hourly rate</label>
-            <input id="hourly-rate" name="rate" type="number" placeholder="Hourly Rate" value="0" />
+            <input pattern="\d+" id="hourly-rate" name="rate" type="number" placeholder="Hourly Rate" value="0" />
         </p>
         <p>
             <label for="hours">Enter hours worked</label>
-            <input id="hours" name="hours" type="number" placeholder="Hours" value="0" />
+            <input pattern="\d+" id="hours" name="hours" type="number" placeholder="Hours" value="0" />
         </p>
         <p>
             <label for="minutes">Enter minutes worked</label>
-            <input id="minutes" name="minutes" type="number" placeholder="Minutes" value="0" />
+            <input pattern="\d+" id="minutes" name="minutes" type="number" placeholder="Minutes" value="0" />
         </p>
         <mark id="result">$ <span>0</span></mark>
     </form>
