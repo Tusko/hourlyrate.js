@@ -4,7 +4,7 @@ With hourlyrate.js you can convert your worked hours to dollars with your hourly
 
 ## Demo
 
-https://frontend.im/demo/hourlyrate.js/
+https://frontend.im/demo/hourlyrate.js/index.html
 
 ## Usage
 

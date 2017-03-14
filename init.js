@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
         var hashes = location.hash.substring(1).split('&');
         $.each(hashes, function(ignore, v) {
             var parseHash = v.split('=');
-            $('input[name="' + parseHash[0] + '"]').val(parseHash[1]);
+            $('input[name="' + parseHash[0] + '"]').val( (parseHash[1]?parseHash[1]:0) );
         });
         calc_rate();
     }

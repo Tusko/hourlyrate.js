@@ -9,6 +9,7 @@ html {
     -ms-text-size-adjust: none;
     > body {
         @extend %justifycontentcenter;
+        @extend %flexdirectioncolumn;
         @extend %alignitemscenter;
         position: relative;
         min-height: 100vh;
@@ -35,10 +36,10 @@ h2 {
 }
 
 form {
+    margin: 0 auto 40px;
     position: relative;
     background: $white;
     width: $container;
-    margin: 0 auto;
     max-width: 96%;
     padding: 40px;
     z-index: 0;
@@ -83,5 +84,11 @@ form {
         font: 700 32px/1 $font;
         text-align: center;
         display: block;
+    }
+}
+
+.git-bttns {
+    iframe {
+        margin: 0 20px
     }
 }
