@@ -19,6 +19,10 @@ html {
   }
 }
 
+#app {
+  max-width: 100%;
+}
+
 h1 {
   margin-bottom: 10px;
   text-align: center;
@@ -40,7 +44,7 @@ section {
   position: relative;
   background: $white;
   width: $container;
-  max-width: 96%;
+  max-width: 100%;
   padding: 40px;
   z-index: 0;
 }
@@ -67,6 +71,7 @@ form {
   @extend %justifycontentcenter;
   @extend %alignitemscenter;
   @extend %flex;
+  margin-bottom: 32px;
   span {
     margin: 0 20px;
   }
