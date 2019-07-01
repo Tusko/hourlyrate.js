@@ -1,20 +1,29 @@
-## Hourlyrate.js
+# hourlyrate.js
 
-With hourlyrate.js you can convert your worked hours to dollars with your hourly rate.
+## Project setup
+```
+npm install
+```
 
-## Demo
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-https://tusko.github.io/hourlyrate.js/
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## Usage
+### Run your tests
+```
+npm run test
+```
 
-Download archive and unzip or clone with github:
+### Lints and fixes files
+```
+npm run lint
+```
 
-`git clone https://github.com/Tusko/hourlyrate.js`
-
-Open `index.html` in your browser and convert spent time to money :D
-
-## License
-
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-Copyright (C) 2017 Tusko Trush <tusko@photoinside.me>
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

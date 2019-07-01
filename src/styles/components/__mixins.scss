@@ -1,0 +1,83 @@
+@import "flexbox";
+
+$font: "Raleway", "Arial", sans-serif;
+$container: 640px;
+$font-base: 15px;
+$default: #333;
+$white: #fff;
+$blue: #00bcd4;
+
+/// Strips the unit from a number.
+@function strip-units($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+// Convert pixels to rems
+// eg. for a relational value of 12px write rem(12)
+// Assumes $em-base is the font-size of <html>
+
+@function rem($pxval) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+  $base: $font-base;
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1rem;
+}
+
+@mixin prefixer($property, $value, $prefixes: webkit) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+@mixin position(
+  $position: relative,
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0,
+  $zIndex: 0
+) {
+  position: $position;
+  z-index: $zIndex;
+  bottom: $bottom;
+  right: $right;
+  left: $left;
+  top: $top;
+}
+@mixin user-select($select) {
+  -webkit-touch-callout: $select;
+  @include prefixer("user-select", $select);
+}
+@mixin cfx() {
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+}
+
+.ani {
+  transition: all 0.25s ease;
+}
