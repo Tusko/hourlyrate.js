@@ -4,7 +4,8 @@
       class="github-button"
       href="https://github.com/tusko"
       aria-label="Follow @tusko on GitHub"
-    >Follow @tusko</a>
+      >Follow @tusko</a
+    >
     <a
       class="github-button"
       href="https://github.com/tusko/hourlyrate.js"
@@ -13,13 +14,15 @@
       data-count-api="/repos/tusko/hourlyrate.js#stargazers_count"
       data-count-aria-label="# stargazers on GitHub"
       aria-label="Star tusko/hourlyrate.js on GitHub"
-    >Star</a>
+      >Star</a
+    >
     <a
       class="github-button"
       href="https://github.com/tusko/hourlyrate.js/archive/master.zip"
       data-icon="octicon-cloud-download"
       aria-label="Download tusko/hourlyrate.js on GitHub"
-    >Download</a>
+      >Download</a
+    >
   </div>
 </template>
 

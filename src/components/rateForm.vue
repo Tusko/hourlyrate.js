@@ -2,15 +2,33 @@
   <form action>
     <p>
       <label>Enter your hourly rate</label>
-      <number-input v-model="form.rate" size="large" :min="1" center controls></number-input>
+      <number-input
+        v-model="form.rate"
+        size="large"
+        :min="1"
+        center
+        controls
+      ></number-input>
     </p>
     <p>
       <label>Enter hours worked</label>
-      <number-input v-model="form.h" size="large" :min="1" center controls></number-input>
+      <number-input
+        v-model="form.h"
+        size="large"
+        :min="1"
+        center
+        controls
+      ></number-input>
     </p>
     <p>
       <label for="minutes">Enter minutes worked</label>
-      <number-input v-model="form.m" size="large" :max="60" center controls></number-input>
+      <number-input
+        v-model="form.m"
+        size="large"
+        :max="60"
+        center
+        controls
+      ></number-input>
     </p>
     <mark>
       $
