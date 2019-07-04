@@ -6,9 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "npm run build&&gh-pages -d build"
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
-  "homepage": "https://tusko.github.io/hourlyrate.js/",
   "dependencies": {
     "@chenfengyuan/vue-number-input": "^1.1.1",
     "core-js": "^2.6.5",
