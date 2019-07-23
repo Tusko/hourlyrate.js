@@ -38,7 +38,6 @@
 <script>
 import Vue from "vue";
 import VueNumberInput from "@chenfengyuan/vue-number-input";
-import { Checkbox } from "vue-checkbox-radio";
 import "@/assets/ios-input.scss";
 
 Vue.component();
@@ -47,9 +46,6 @@ Vue.use(VueNumberInput);
 
 export default {
   name: "HourlyRateForm",
-  components: {
-    checkbox: Checkbox
-  },
   data: () => ({
     form: {
       rate: 0,
