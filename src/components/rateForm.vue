@@ -6,11 +6,11 @@
     </p>
     <p>
       <label>Enter hours worked</label>
-      <number-input v-model="form.h" size="large" :min="1" center controls></number-input>
+      <number-input v-model="form.h" size="large" :min="0" center controls></number-input>
     </p>
     <p>
       <label for="minutes">Enter minutes worked</label>
-      <number-input v-model="form.m" size="large" :max="60" center controls></number-input>
+      <number-input v-model="form.m" size="large" :min="0" :max="60" center controls></number-input>
     </p>
     <p class="price-converter">
       <input class="apple-switch" id="convertToUAH" type="checkbox" v-model="convertToUAH" />
@@ -104,6 +104,14 @@ export default {
           }
         });
       }
+    },
+    "form.rate": function(rate) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        price: "dollarPerHour",
+        event: "rate",
+        value: rate
+      });
     }
   }
 };
