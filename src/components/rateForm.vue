@@ -17,7 +17,7 @@
       <label for="convertToUAH">Convert to UAH</label>
     </p>
     <mark>
-      {{ convertToUAH?'₴':'$' }}
+      {{ convertToUAH ? "₴" : "$" }}
       <span>{{ convertToUAH ? calcTotalsUAH : calcTotals }}</span>
     </mark>
   </form>
@@ -33,12 +33,12 @@
   }
 }
 </style>
-
-
 <script>
 import Vue from "vue";
 import VueNumberInput from "@chenfengyuan/vue-number-input";
 import "@/assets/ios-input.scss";
+import wait4GA from "@/components/wait4GA";
+import { debounce } from "lodash";
 
 Vue.component();
 
@@ -105,14 +105,15 @@ export default {
         });
       }
     },
-    "form.rate": function(rate) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        price: "dollarPerHour",
-        event: "rate",
-        value: rate
-      });
-    }
+    "form.rate": debounce(function(rate) {
+      wait4GA()
+        .then(w4ga =>
+          w4ga("send", "event", "input", "price", rate, {
+            nonInteraction: true
+          })
+        )
+        .catch(e => console.warn(e));
+    }, 1000)
   }
 };
 </script>

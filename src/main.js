@@ -16,18 +16,16 @@ new Vue({
   router,
   render: h => h(App),
   mounted() {
-    if (process.env.NODE_ENV !== "development") {
-      this.$loadScript(
-        "https://www.googletagmanager.com/gtag/js?id=UA-76463064-8"
-      ).then(() => {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        gtag("config", "UA-76463064-8");
-      });
+    if (
+      process.env.NODE_ENV !== "development" ||
+      location.search === "?test=ga"
+    ) {
+      this.$loadScript("https://www.google-analytics.com/analytics.js")
+        .then(() => {
+          ga("create", "UA-76463064-8", "auto");
+          ga("send", "pageview");
+        })
+        .catch(e => console.warn("GA error"));
     }
   }
 }).$mount("#app");
