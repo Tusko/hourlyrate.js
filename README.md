@@ -1,6 +1,6 @@
 # hourlyrate.js
 
-Demo: https://hourlyrate.frontend.im/
+Demo: https://hourlyrate.arsmoon.com
 
 ## Project setup
 
