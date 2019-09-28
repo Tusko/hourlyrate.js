@@ -39,7 +39,7 @@ new Vue({
           ga("create", "UA-76463064-8", "auto");
           ga("send", "pageview");
         })
-        .catch(e => console.warn("GA error"));
+        .catch(() => console.warn("GA error"));
     }
   }
 }).$mount("#app");
