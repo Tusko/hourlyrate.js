@@ -9,6 +9,7 @@
     <a
       class="github-button"
       href="https://github.com/tusko/hourlyrate.js"
+      target="_blank"
       data-icon="octicon-star"
       data-count-href="/tusko/hourlyrate.js/stargazers"
       data-count-api="/repos/tusko/hourlyrate.js#stargazers_count"
@@ -18,6 +19,7 @@
     >
     <a
       class="github-button"
+      target="_blank"
       href="https://github.com/tusko/hourlyrate.js/archive/master.zip"
       data-icon="octicon-cloud-download"
       aria-label="Download tusko/hourlyrate.js on GitHub"

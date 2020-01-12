@@ -26,7 +26,7 @@
         v-model="form.m"
         size="large"
         :min="0"
-        :max="60"
+        :max="59"
         center
         controls
       ></number-input>
@@ -62,9 +62,7 @@ import Vue from "vue";
 import VueNumberInput from "@chenfengyuan/vue-number-input";
 import "@/assets/ios-input.scss";
 import wait4GA from "@/components/wait4GA";
-import { debounce } from "lodash";
-
-Vue.component();
+import { debounce, isEmpty, cloneDeep, transform } from "lodash";
 
 Vue.use(VueNumberInput);
 
@@ -79,10 +77,15 @@ export default {
     convertToUAH: false,
     exchange: null
   }),
-  beforeMount() {
-    if (this.$route.query.s) {
-      this.form = JSON.parse(this.$route.query.s);
+  created() {
+    if (!isEmpty(this.$route.query)) {
+      const qs = transform(cloneDeep(this.$route.query), (result, v, k) => {
+        result[k] = Number(v);
+      });
+      this.form = qs;
     }
+  },
+  beforeMount() {
     let privat24Exchange = sessionStorage.getItem("exchange");
     if (privat24Exchange) {
       this.exchange = JSON.parse(privat24Exchange);
@@ -114,25 +117,16 @@ export default {
       return !isNaN(totalsUAH) ? totalsUAH.toFixed(2) : 0;
     }
   },
-  methods: {
-    saveURI(v) {
-      this.$router.push({
-        query: {
-          s: JSON.stringify(v)
-        }
-      });
-    }
-  },
   watch: {
     form: {
       deep: true,
       immediate: false,
       handler(v) {
-        this.$router.push({
-          query: {
-            s: JSON.stringify(v)
-          }
-        });
+        this.$router
+          .replace({
+            query: v
+          })
+          .catch(err => {});
       }
     },
     "form.rate": debounce(function(rate) {

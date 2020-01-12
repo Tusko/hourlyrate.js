@@ -6,7 +6,9 @@ import LoadScript from "vue-plugin-load-script";
 Vue.use(LoadScript);
 Vue.use(VueRouter);
 
-const router = new VueRouter({});
+const router = new VueRouter({
+  mode: "history"
+});
 
 Vue.config.productionTip = false;
 
