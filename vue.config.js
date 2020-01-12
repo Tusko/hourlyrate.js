@@ -3,6 +3,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const isDevServer = process.argv.indexOf("serve") >= 0;
 const isChromeBuild = process.argv.indexOf("chrome") >= 0;
 const CopyPlugin = require("copy-webpack-plugin");
+const ZipPlugin = require("zip-webpack-plugin");
 
 let defaultSettings = {
   productionSourceMap: false,
@@ -50,7 +51,7 @@ if (!isDevServer) {
 
 if (isChromeBuild) {
   defaultSettings.outputDir = "./dist_chrome/";
-  defaultSettings.configureWebpack.plugins.push(
+  defaultSettings.configureWebpack.plugins = [
     new CopyPlugin(
       [
         {
@@ -61,8 +62,11 @@ if (isChromeBuild) {
       {
         logLevel: "debug"
       }
-    )
-  );
+    ),
+    new ZipPlugin({
+      filename: "chrome-hourlyrate.zip"
+    })
+  ];
 
   defaultSettings.filenameHashing = false;
 }
