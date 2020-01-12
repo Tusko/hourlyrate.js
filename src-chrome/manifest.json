@@ -15,5 +15,5 @@
     "128": "android-chrome-144x144.png"
   },
   "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
-  "permissions": ["activeTab", "https://*/*", "tabs", "webRequest"]
+  "permissions": ["activeTab"]
 }
