@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
 import LoadScript from "vue-plugin-load-script";
+const isDev = process.env.NODE_ENV !== "production";
 
 Vue.use(LoadScript);
 Vue.use(VueRouter);
@@ -23,10 +24,11 @@ new Vue({
         navigator.serviceWorker
           .register("/sw.js")
           .then(registration => {
-            console.log("SW registered: ", registration);
+            if (isDev) console.log("SW registered: ", registration);
           })
           .catch(registrationError => {
-            console.log("SW registration failed: ", registrationError);
+            if (isDev)
+              console.log("SW registration failed: ", registrationError);
           });
       });
     }
