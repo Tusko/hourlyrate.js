@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "hourlyrate",
+  "description": "Helps you to convert hours to dollars",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "favicon-16x16.png",
+    "default_title": "hourlyrate"
+  },
+  "icons": {
+    "16": "favicon-16x16.png",
+    "48": "android-chrome-48x48.png",
+    "128": "android-chrome-144x144.png"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+  "permissions": ["activeTab", "https://*/*", "tabs", "webRequest"]
+}

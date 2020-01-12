@@ -1,11 +1,15 @@
 <template>
-  <div id="app">
+  <div id="app" :class="appClass">
     <section>
       <h1>{{ appName }}</h1>
       <h2>{{ appDescr }}</h2>
       <rateForm />
     </section>
-    <gitBtns />
+    <gitBtns v-if="!isChrome" />
+    <div v-else class="copyright">
+      &copy; {{ year }} by
+      <a href="https://arsmoon.com/" target="_blank">Arsmoon</a>
+    </div>
   </div>
 </template>
 
@@ -24,9 +28,17 @@ export default {
   },
   data() {
     return {
-      appName: "Hourlyrate.js",
-      appDescr: "Convert your hours to dollars"
+      appName: "hourlyrate",
+      appDescr: "Convert your hours to dollars",
+      isChrome: process.env.VUE_APP_IS_CHROME,
+      year: new Date().getFullYear()
     };
+  },
+  computed: {
+    appClass() {
+      const cond = this.isChrome ? "chrome" : "browser";
+      return `${cond}-app`;
+    }
   }
 };
 </script>

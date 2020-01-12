@@ -8,21 +8,21 @@
     >
     <a
       class="github-button"
-      href="https://github.com/tusko/hourlyrate.js"
+      href="https://github.com/tusko/hourlyrate"
       target="_blank"
       data-icon="octicon-star"
-      data-count-href="/tusko/hourlyrate.js/stargazers"
-      data-count-api="/repos/tusko/hourlyrate.js#stargazers_count"
+      data-count-href="/tusko/hourlyrate/stargazers"
+      data-count-api="/repos/tusko/hourlyrate#stargazers_count"
       data-count-aria-label="# stargazers on GitHub"
-      aria-label="Star tusko/hourlyrate.js on GitHub"
+      aria-label="Star tusko/hourlyrate on GitHub"
       >Star</a
     >
     <a
       class="github-button"
       target="_blank"
-      href="https://github.com/tusko/hourlyrate.js/archive/master.zip"
+      href="https://github.com/tusko/hourlyrate/archive/master.zip"
       data-icon="octicon-cloud-download"
-      aria-label="Download tusko/hourlyrate.js on GitHub"
+      aria-label="Download tusko/hourlyrate on GitHub"
       >Download</a
     >
   </div>

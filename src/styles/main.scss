@@ -47,6 +47,9 @@ section {
   max-width: 100%;
   padding: 40px;
   z-index: 0;
+  .chrome-app & {
+    margin-bottom: 0;
+  }
 }
 
 form {
@@ -74,5 +77,18 @@ form {
   margin-bottom: 32px;
   span {
     margin: 0 20px;
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin: 20px 0;
+  color: $white;
+  a {
+    text-decoration: underline;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

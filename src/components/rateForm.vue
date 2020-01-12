@@ -78,7 +78,7 @@ export default {
     exchange: null
   }),
   created() {
-    if (!isEmpty(this.$route.query)) {
+    if (!isEmpty(this.$route.query) && !process.env.VUE_APP_IS_CHROME) {
       const qs = transform(cloneDeep(this.$route.query), (result, v, k) => {
         result[k] = Number(v);
       });
@@ -122,11 +122,12 @@ export default {
       deep: true,
       immediate: false,
       handler(v) {
-        this.$router
-          .replace({
-            query: v
-          })
-          .catch(err => {});
+        if (!process.env.VUE_APP_IS_CHROME)
+          this.$router
+            .replace({
+              query: v
+            })
+            .catch(err => {});
       }
     },
     "form.rate": debounce(function(rate) {

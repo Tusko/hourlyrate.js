@@ -18,7 +18,7 @@ new Vue({
   router,
   render: h => h(App),
   beforeMount() {
-    if ("serviceWorker" in navigator) {
+    if ("serviceWorker" in navigator && !process.env.VUE_APP_IS_CHROME) {
       window.addEventListener("load", () => {
         navigator.serviceWorker
           .register("/sw.js")
