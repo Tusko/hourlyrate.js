@@ -95,6 +95,12 @@ export default {
         });
     }
   },
+  mounted() {
+    const plusminButtons = document.getElementsByClassName(
+      "number-input__button"
+    );
+    plusminButtons.forEach(button => (button.tabIndex = -1));
+  },
   computed: {
     time2minites() {
       return Number(this.form.h) * 60 + Number(this.form.m);
