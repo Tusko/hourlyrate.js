@@ -127,6 +127,7 @@ typings/
 ./dist_chrome
 dist/*
 dist_chrome/*
+dist_chrome.*
 npm-debug.log
 yarn-error.log
 
