@@ -14,7 +14,7 @@
     "chrome extension",
     "browser"
   ],
-  "author": "Jeremy Ashkenas <jeremy@documentcloud.org>",
+  "author": "Tusko Trush <tusko@trush.email>",
   "private": true,
   "scripts": {
     "chrome": "vue-cli-service build --mode chrome",

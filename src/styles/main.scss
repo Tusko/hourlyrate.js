@@ -103,5 +103,9 @@ form {
     &:hover {
       text-decoration: none;
     }
+    &.chrome-webstore-link {
+      text-decoration: none;
+      width: 180px;
+    }
   }
 }

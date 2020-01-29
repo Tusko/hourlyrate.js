@@ -12,13 +12,15 @@
       </p>
       <slot v-if="!isChrome">
         <gitBtns />
-        <button
-          v-if="!isChromeAppInstalled"
-          onclick="chrome.webstore.install()"
-          class="button"
+        <a
+          href="https://chrome.google.com/webstore/detail/bgjbahmkflngdopgjifphcpepapgohca"
+          class="chrome-webstore-link"
+          target="_blank"
         >
-          Add to Chrome
-        </button>
+          <img
+            :src="require('@/assets/ChromeWebStore_BadgeWBorder_v2_206x58.png')"
+            alt=""
+        /></a>
       </slot>
     </div>
   </div>
@@ -49,9 +51,6 @@ export default {
     appClass() {
       const cond = this.isChrome ? "chrome" : "browser";
       return `${cond}-app`;
-    },
-    isChromeAppInstalled() {
-      return chrome.app.isInstalled;
     }
   }
 };
