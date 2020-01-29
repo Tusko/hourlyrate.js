@@ -1,6 +1,20 @@
 {
   "name": "hourlyrate",
-  "version": "1.0",
+  "version": "1.0.1",
+  "description": "Helps you to convert hours to dollars.",
+  "homepage": "https://hourlyrate.arsmoon.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tusko/hourlyrate.js.git"
+  },
+  "keywords": [
+    "convert",
+    "hour",
+    "rate",
+    "chrome extension",
+    "browser"
+  ],
+  "author": "Jeremy Ashkenas <jeremy@documentcloud.org>",
   "private": true,
   "scripts": {
     "chrome": "vue-cli-service build --mode chrome",
