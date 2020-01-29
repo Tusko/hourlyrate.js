@@ -63,27 +63,40 @@ form {
     font-weight: 700;
     display: block;
   }
-  mark {
-    font: 700 32px/1 $font;
-    text-align: center;
-    display: block;
-  }
 }
 
-.git-bttns {
-  @extend %justifycontentcenter;
-  @extend %alignitemscenter;
-  @extend %flex;
-  margin-bottom: 32px;
-  span {
-    margin: 0 20px;
+.button {
+  transition: all 0.4s ease 0s;
+  border: 1px solid $white;
+  background: transparent;
+  border-radius: 0.25rem;
+  padding: 10px 20px;
+  font-size: 15px;
+  line-height: 1;
+  color: $white;
+  &.smaller {
+    border-color: #d9dadc;
+    color: $default;
+  }
+  &:hover {
+    box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.35);
   }
 }
 
 .copyright {
-  text-align: center;
-  margin: 20px 0;
   color: $white;
+  margin: 20px 40px;
+  .chrome-app & {
+    text-align: center;
+  }
+  .browser-app & {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  p {
+    margin-bottom: 0;
+  }
   a {
     text-decoration: underline;
     color: inherit;

@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://hourlyrate.netlify.com/*"
+  to = "https://hourlyrate.arsmoon.com/:splat"
+  status = 301
+  force = true

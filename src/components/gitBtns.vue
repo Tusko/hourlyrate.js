@@ -2,12 +2,6 @@
   <div class="git-bttns">
     <a
       class="github-button"
-      href="https://github.com/tusko"
-      aria-label="Follow @tusko on GitHub"
-      >Follow @tusko</a
-    >
-    <a
-      class="github-button"
       href="https://github.com/tusko/hourlyrate.js"
       target="_blank"
       data-icon="octicon-star"
@@ -15,16 +9,7 @@
       data-count-api="/repos/tusko/hourlyrate#stargazers_count"
       data-count-aria-label="# stargazers on GitHub"
       aria-label="Star tusko/hourlyrate on GitHub"
-      >Star</a
-    >
-    <a
-      class="github-button"
-      target="_blank"
-      href="https://github.com/tusko/hourlyrate.js/archive/master.zip"
-      data-icon="octicon-cloud-download"
-      aria-label="Download tusko/hourlyrate on GitHub"
-      >Download</a
-    >
+    >Star</a>
   </div>
 </template>
 

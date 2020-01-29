@@ -1,5 +1,5 @@
 <template>
-  <form action>
+  <form @submit.prevent>
     <p>
       <label>Enter your hourly rate</label>
       <number-input
@@ -31,32 +31,34 @@
         controls
       ></number-input>
     </p>
-    <p class="price-converter">
-      <input
-        class="apple-switch"
-        id="convertToUAH"
-        type="checkbox"
-        v-model="convertToUAH"
-      />
-      <label for="convertToUAH">Convert to UAH</label>
-    </p>
-    <mark>
-      {{ convertToUAH ? "₴" : "$" }}
-      <span>{{ convertToUAH ? calcTotalsUAH : calcTotals }}</span>
-    </mark>
+    <div class="rate-result">
+      <div class="rate-result-amount">
+        <p class="rate-result-amount-converter">
+          <input
+            class="apple-switch"
+            id="convertToUAH"
+            type="checkbox"
+            v-model="convertToUAH"
+          />
+          <label for="convertToUAH">Convert to UAH</label>
+        </p>
+        <mark>
+          {{ convertToUAH ? "₴" : "$" }}
+          <span>{{ convertToUAH ? calcTotalsUAH : calcTotals }}</span>
+        </mark>
+      </div>
+      <div class="rate-result-share">
+        <button
+          class="button smaller"
+          v-clipboard:copy="shareURL"
+          v-clipboard:success="copiedUrl"
+        >
+          Share
+        </button>
+      </div>
+    </div>
   </form>
 </template>
-
-<style lang="scss">
-.price-converter {
-  align-items: center;
-  display: flex;
-  label {
-    margin: 0 0 0 10px;
-    font-size: 18px;
-  }
-}
-</style>
 <script>
 import Vue from "vue";
 import VueNumberInput from "@chenfengyuan/vue-number-input";
@@ -115,6 +117,15 @@ export default {
     calcTotalsUAH() {
       const totalsUAH = this.calcTotals * Number(this.exchange[0].sale);
       return !isNaN(totalsUAH) ? totalsUAH.toFixed(2) : 0;
+    },
+    shareURL() {
+      let params = new URLSearchParams(this.form).toString();
+      return `https://hourlyrate.arsmoon.com/?${params}`;
+    }
+  },
+  methods: {
+    copiedUrl() {
+      alert(`Copied to clipboard: ${this.shareURL}`);
     }
   },
   watch: {
@@ -142,3 +153,24 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.rate-result {
+  justify-content: space-between;
+  margin-top: 40px;
+  display: flex;
+  &-amount {
+    &-converter {
+      align-items: center;
+      display: flex;
+      label {
+        margin: 0 0 0 10px;
+        font-size: 18px;
+      }
+    }
+    mark {
+      font: 700 32px/1 $font;
+    }
+  }
+}
+</style>

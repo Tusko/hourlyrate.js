@@ -2,10 +2,12 @@ import Vue from "vue";
 import App from "./App.vue";
 import VueRouter from "vue-router";
 import LoadScript from "vue-plugin-load-script";
+import VueClipboard from "vue-clipboard2";
 const isDev = process.env.NODE_ENV !== "production";
 
 Vue.use(LoadScript);
 Vue.use(VueRouter);
+Vue.use(VueClipboard);
 
 const router = new VueRouter({
   mode: "history"

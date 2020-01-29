@@ -5,10 +5,21 @@
       <h2>{{ appDescr }}</h2>
       <rateForm />
     </section>
-    <gitBtns v-if="!isChrome" />
-    <div v-else class="copyright">
-      &copy; {{ year }} by
-      <a href="https://arsmoon.com/" target="_blank">Arsmoon</a>
+    <div class="copyright">
+      <p>
+        &copy; {{ year }} by
+        <a href="https://arsmoon.com/" target="_blank">Arsmoon</a>
+      </p>
+      <slot v-if="!isChrome">
+        <gitBtns />
+        <button
+          v-if="!isChromeAppInstalled"
+          onclick="chrome.webstore.install()"
+          class="button"
+        >
+          Add to Chrome
+        </button>
+      </slot>
     </div>
   </div>
 </template>
@@ -38,6 +49,9 @@ export default {
     appClass() {
       const cond = this.isChrome ? "chrome" : "browser";
       return `${cond}-app`;
+    },
+    isChromeAppInstalled() {
+      return chrome.app.isInstalled;
     }
   }
 };

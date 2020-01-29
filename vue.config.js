@@ -14,7 +14,18 @@ let defaultSettings = {
       chunkFilename: "[name].[hash].js"
     }
   },
-  publicPath: ""
+  publicPath: "",
+  devServer: {
+    https: true
+  },
+  css: {
+    loaderOptions: {
+      // pass options to sass-loader
+      sass: {
+        prependData: `@import "@/styles/components/__mixins";`
+      }
+    }
+  }
 };
 
 if (!isDevServer) {
