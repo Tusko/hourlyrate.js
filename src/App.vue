@@ -18,8 +18,8 @@
           target="_blank"
         >
           <img
-            :src="require('@/assets/ChromeWebStore_BadgeWBorder_v2_206x58.png')"
-            alt=""
+            :src="require('@/assets/chrome-webstore-badge.svg')"
+            alt="Avalaible in the Chrome Web Store"
         /></a>
       </slot>
     </div>

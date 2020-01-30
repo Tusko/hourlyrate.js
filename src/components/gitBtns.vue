@@ -9,7 +9,8 @@
       data-count-api="/repos/tusko/hourlyrate#stargazers_count"
       data-count-aria-label="# stargazers on GitHub"
       aria-label="Star tusko/hourlyrate on GitHub"
-    >Star</a>
+      >Star</a
+    >
   </div>
 </template>
 
@@ -21,3 +22,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.git-bttns {
+  transform: translate(0, 4px);
+}
+</style>

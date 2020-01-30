@@ -10,6 +10,7 @@ html {
     @extend %justifycontentcenter;
     @extend %flexdirectioncolumn;
     @extend %alignitemscenter;
+    font-family: $font;
     position: relative;
     min-height: 100vh;
     background: $blue;
@@ -101,11 +102,16 @@ form {
     text-decoration: underline;
     color: inherit;
     &:hover {
-      text-decoration: none;
+      text-decoration: none
     }
     &.chrome-webstore-link {
+      transition: all 0.4s ease 0s;
+      transform: translateZ(0);
       text-decoration: none;
-      width: 180px;
+      width: 166px;
+      &:hover {
+        opacity: 0.75
+      }
     }
   }
 }
