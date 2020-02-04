@@ -5,6 +5,10 @@ const isChromeBuild = process.argv.indexOf("chrome") >= 0;
 const CopyPlugin = require("copy-webpack-plugin");
 const ZipPlugin = require("zip-webpack-plugin");
 
+if (isChromeBuild) {
+  process.env.VUE_APP_IS_CHROME = true;
+}
+
 let defaultSettings = {
   productionSourceMap: false,
   runtimeCompiler: true,
