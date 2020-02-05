@@ -51,6 +51,10 @@ section {
   .chrome-app & {
     margin-bottom: 0;
   }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
 }
 
 form {
@@ -94,6 +98,12 @@ form {
     justify-content: space-between;
     align-items: center;
     display: flex;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      a.chrome-webstore-link {
+        margin-top: 10px;
+      }
+    }
   }
   p {
     margin-bottom: 0;
@@ -102,7 +112,7 @@ form {
     text-decoration: underline;
     color: inherit;
     &:hover {
-      text-decoration: none
+      text-decoration: none;
     }
     &.chrome-webstore-link {
       transition: all 0.4s ease 0s;
@@ -110,7 +120,7 @@ form {
       text-decoration: none;
       width: 166px;
       &:hover {
-        opacity: 0.75
+        opacity: 0.75;
       }
     }
   }
