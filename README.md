@@ -4,7 +4,7 @@
 
 Website: https://hourlyrate.arsmoon.com or
 
-Install as [Chrome extension](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+Available in [![Chrome extension](https://img.shields.io/chrome-web-store/v/bgjbahmkflngdopgjifphcpepapgohca.svg)](ttps://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
 
 ---
 
@@ -19,5 +19,3 @@ To build app run `npm run build`
 To build Chrome extension run `npm run chrome`
 
 ---
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Tusko/hourlyrate)
