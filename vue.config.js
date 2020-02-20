@@ -42,12 +42,14 @@ if (!isDevServer) {
       })
     ],
     optimization: {
-      runtimeChunk: true,
+      runtimeChunk: !isChromeBuild,
       minimize: true,
-      splitChunks: {
-        chunks: "all",
-        minSize: 120000
-      },
+      splitChunks: isChromeBuild
+        ? false
+        : {
+            chunks: "all",
+            minSize: 120000
+          },
       minimizer: [
         new TerserPlugin({
           terserOptions: {
