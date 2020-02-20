@@ -2,20 +2,44 @@
   <form @submit.prevent>
     <p>
       <label>Enter your hourly rate</label>
-      <number-input v-model="form.rate" size="large" :min="1" center controls></number-input>
+      <number-input
+        v-model="form.rate"
+        size="large"
+        :min="1"
+        center
+        controls
+      ></number-input>
     </p>
     <p>
       <label>Enter hours worked</label>
-      <number-input v-model="form.h" size="large" :min="0" center controls></number-input>
+      <number-input
+        v-model="form.h"
+        size="large"
+        :min="0"
+        center
+        controls
+      ></number-input>
     </p>
     <p>
       <label for="minutes">Enter minutes worked</label>
-      <number-input v-model="form.m" size="large" :min="0" :max="59" center controls></number-input>
+      <number-input
+        v-model="form.m"
+        size="large"
+        :min="0"
+        :max="59"
+        center
+        controls
+      ></number-input>
     </p>
     <div class="rate-result">
       <div class="rate-result-amount">
         <p class="rate-result-amount-converter">
-          <input class="apple-switch" id="convertToUAH" type="checkbox" v-model="convertToUAH" />
+          <input
+            class="apple-switch"
+            id="convertToUAH"
+            type="checkbox"
+            v-model="convertToUAH"
+          />
           <label for="convertToUAH">Convert to UAH</label>
         </p>
         <mark>
@@ -28,7 +52,9 @@
           class="button smaller"
           v-clipboard:copy="shareURL"
           v-clipboard:success="copiedUrl"
-        >Share</button>
+        >
+          Share
+        </button>
       </div>
     </div>
   </form>
@@ -73,12 +99,6 @@ export default {
           sessionStorage.setItem("exchange", JSON.stringify(json));
         });
     }
-  },
-  mounted() {
-    const plusminButtons = document.getElementsByClassName(
-      "number-input__button"
-    );
-    plusminButtons.forEach(button => (button.tabIndex = -1));
   },
   computed: {
     time2minites() {
