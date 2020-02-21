@@ -16,5 +16,5 @@
   },
 
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src https://api.privatbank.ua; object-src 'self'",
-  "permissions": []
+  "permissions": ["clipboardWrite"]
 }
