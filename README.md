@@ -4,7 +4,7 @@
 
 Website: https://hourlyrate.arsmoon.com or
 
-Available in [![Chrome extension](https://img.shields.io/chrome-web-store/v/bgjbahmkflngdopgjifphcpepapgohca.svg)](ttps://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+Available in [![Chrome extension](https://img.shields.io/chrome-web-store/v/bgjbahmkflngdopgjifphcpepapgohca.svg)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
 
 ---
 
