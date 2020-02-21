@@ -80,8 +80,20 @@ form {
   line-height: 1;
   color: $white;
   &.smaller {
-    border-color: #d9dadc;
-    color: $default;
+    border-color: rgba($blue, 0.5);
+    color: $blue;
+    &:hover {
+      background: rgba($blue, 0.1);
+      border-color: $blue;
+    }
+  }
+  &[disabled] {
+    box-shadow: none !important;
+    background: rgba($grey, 0.25);
+    color: rgba($default, 0.5);
+    border-color: $grey;
+    cursor: default;
+    opacity: 0.35;
   }
   &:hover {
     box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.35);
