@@ -4,25 +4,25 @@
   outline: none;
   width: 50px;
   height: 30px;
-  background-color: #ffffff;
-  border: 1px solid #d9dadc;
+  // background-color: var(--color);
+  border: 1px solid var(--disabled);
   border-radius: 50px;
-  box-shadow: inset -20px 0 0 0 #ffffff;
+  box-shadow: inset -20px 0 0 0 #fff;
   transition-duration: 200ms;
   &:after {
     content: "";
     position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 26px;
-    height: 26px;
+    height: 28px;
+    width: 28px;
+    left: 0;
+    top: 0;
     background-color: transparent;
     border-radius: 50%;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
   }
   &:checked {
-    border-color: #4ed164;
-    box-shadow: inset 20px 0 0 0 #4ed164;
+    border-color: var(--disabled);
+    box-shadow: inset 20px 0 0 0 Highlight;
     &:after {
       left: 20px;
       box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);

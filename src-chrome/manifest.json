@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "hourlyrate",
   "description": "Helps you to convert hours to dollars",
-  "version": "1.0.3",
+  "version": "1.1.0",
 
   "browser_action": {
     "default_popup": "index.html",

@@ -1,12 +1,27 @@
 @import "flexbox";
 
-$font: "Raleway", "Arial", sans-serif;
-$container: 640px;
-$font-base: 15px;
-$default: #333;
-$white: #fff;
-$blue: #00bcd4;
-$grey: #d9dadc;
+:root {
+  --font: "Raleway", "Arial", sans-serif;
+  --font-base: 15px;
+
+  --container: 640px;
+
+  --background: #00bcd4;
+  --background-lighten: rgba(#00bcd4, 0.5);
+  --disabled: #d9dadc;
+  --color: #333;
+  --color-lighten: rgba(#333, 0.5);
+  --light: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // --background-color: #00bcd4;
+    // --disabled: #d9dadc;
+    --color: #fff;
+    --light: #333;
+  }
+}
 
 /// Strips the unit from a number.
 @function strip-units($value) {

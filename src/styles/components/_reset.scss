@@ -151,7 +151,7 @@ ol {
 }
 
 a {
-  color: $blue;
+  color: var(--background);
   outline: 0 none;
   &:hover {
     text-decoration: none;

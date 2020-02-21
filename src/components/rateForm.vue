@@ -160,8 +160,9 @@ export default {
   &-amount {
     position: relative;
     &[disabled]:before {
-      background: rgba($white, 0.75);
       @include position(absolute);
+      background: var(--light);
+      opacity: 0.25;
       content: "";
       z-index: 1;
     }
@@ -174,7 +175,9 @@ export default {
       }
     }
     mark {
-      font: 700 32px/1 $font;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1;
     }
   }
   .browser-app {
