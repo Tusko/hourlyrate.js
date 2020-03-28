@@ -32,7 +32,7 @@
       ></number-input>
     </p>
     <div class="rate-result">
-      <div class="rate-result-amount" :disabled="disabledActions">
+      <div class="rate-result-amount">
         <p class="rate-result-amount-converter">
           <input
             class="apple-switch"
@@ -49,7 +49,6 @@
       </div>
       <div class="rate-result-share">
         <button
-          :disabled="disabledActions"
           class="button smaller"
           v-clipboard:copy="shareURL"
           v-clipboard:success="copiedUrl"
@@ -116,9 +115,6 @@ export default {
     shareURL() {
       let params = new URLSearchParams(this.form).toString();
       return `https://hourlyrate.arsmoon.com/?${params}`;
-    },
-    disabledActions() {
-      return Number(this.form.h) === 0 && Number(this.form.h) === 0;
     }
   },
   methods: {
