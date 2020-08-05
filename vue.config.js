@@ -68,17 +68,14 @@ if (!isDevServer) {
 if (isChromeBuild) {
   defaultSettings.outputDir = "./dist_chrome/";
   defaultSettings.configureWebpack.plugins = [
-    new CopyPlugin(
-      [
+    new CopyPlugin({
+      patterns: [
         {
           from: "./src-chrome",
           force: true
         }
-      ],
-      {
-        logLevel: "debug"
-      }
-    ),
+      ]
+    }),
     new ZipPlugin({
       filename: "chrome-hourlyrate.zip"
     })
