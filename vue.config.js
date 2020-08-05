@@ -24,9 +24,8 @@ let defaultSettings = {
   },
   css: {
     loaderOptions: {
-      // pass options to sass-loader
       sass: {
-        prependData: `@import "@/styles/components/__mixins";`
+        additionalData: `@import "@/styles/components/__mixins";`
       }
     }
   }
@@ -47,9 +46,9 @@ if (!isDevServer) {
       splitChunks: isChromeBuild
         ? false
         : {
-            chunks: "all",
-            minSize: 120000
-          },
+          chunks: "all",
+          minSize: 120000
+        },
       minimizer: [
         new TerserPlugin({
           terserOptions: {
