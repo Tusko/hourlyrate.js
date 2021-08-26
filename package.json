@@ -17,10 +17,10 @@
   "author": "Tusko Trush <tusko@trush.email>",
   "private": true,
   "scripts": {
-    "chrome": "NODE_ENV=production vue-cli-service build --mode chrome",
     "serve:chrome": "NODE_ENV=development vue-cli-service serve --mode chrome",
     "serve:web": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build:chrome": "NODE_ENV=production vue-cli-service build --mode chrome",
+    "build:web": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
