@@ -114,7 +114,7 @@ export default {
     },
     shareURL() {
       let params = new URLSearchParams(this.form).toString();
-      return `https://hourlyrate.arsmoon.com/?${params}`;
+      return `https://hourlyrate.frontend.im/?${params}`;
     }
   },
   methods: {

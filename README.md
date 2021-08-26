@@ -2,7 +2,7 @@
 
 ### Helps you to convert your hours to dollars.
 
-Website: https://hourlyrate.arsmoon.com or
+Website: https://hourlyrate.frontend.im or
 
 Available in [![Chrome extension](https://img.shields.io/chrome-web-store/v/bgjbahmkflngdopgjifphcpepapgohca.svg)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
 
@@ -10,12 +10,12 @@ Available in [![Chrome extension](https://img.shields.io/chrome-web-store/v/bgjb
 
 ## Webapp build
 
-To build app run `npm run build`
+To build app run `yarn run build`
 
 ---
 
 ## Chrome build
 
-To build Chrome extension run `npm run chrome`
+To build Chrome extension run `yarn run chrome`
 
 ---

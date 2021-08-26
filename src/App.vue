@@ -8,7 +8,7 @@
     <div class="copyright">
       <p>
         &copy; {{ year }} by
-        <a href="https://arsmoon.com/" target="_blank">Arsmoon</a>
+        <a href="https://frontend.im/" target="_blank">Tusko Trush</a>
       </p>
       <slot v-if="!isChrome">
         <gitBtns />
@@ -37,21 +37,21 @@ export default {
   name: "app",
   components: {
     rateForm,
-    gitBtns
+    gitBtns,
   },
   data() {
     return {
       appName: "hourlyrate",
       appDescr: "Convert your hours to dollars",
       isChrome: process.env.VUE_APP_IS_CHROME,
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
     };
   },
   computed: {
     appClass() {
       const cond = this.isChrome ? "chrome" : "browser";
       return `${cond}-app`;
-    }
-  }
+    },
+  },
 };
 </script>
