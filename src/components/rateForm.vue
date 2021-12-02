@@ -143,7 +143,7 @@ export default {
               nonInteraction: true,
             })
           )
-          .catch((e) => console.warn(e));
+          .catch(console.warn);
       }
     });
 
