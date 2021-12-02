@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "hourlyrate",
   "description": "Helps you to convert hours to USD and UAH",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "author": "Tusko Trush",
   "homepage_url": "https://hourlyrate.frontend.im/",
 
@@ -21,14 +21,5 @@
     "48": "android-chrome-48x48.png",
     "128": "android-chrome-144x144.png"
   },
-
-  "permissions": ["clipboardWrite"],
-  "host_permissions": ["https://*/"],
-  "content_scripts": [
-    {
-      "css": ["./css/app.css"],
-      "js": ["./js/app.js"],
-      "matches": ["https://api.privatbank.ua/*"]
-    }
-  ]
+  "permissions": ["clipboardWrite"]
 }
