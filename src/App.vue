@@ -1,5 +1,9 @@
 <script setup>
 import { computed, ref } from "vue";
+
+import rateFormVue from "./components/rateForm.vue";
+import gitBtnsVue from "./components/gitBtns.vue";
+
 const src = ref({
   name: "hourlyrate",
   desc: "Convert your hours to dollars",
@@ -16,7 +20,7 @@ const appClass = computed(() => {
     <section>
       <h1>{{ src.name }}</h1>
       <h2>{{ src.desc }}</h2>
-      <rateForm />
+      <rateFormVue />
     </section>
     <div class="copyright">
       <p>
@@ -24,7 +28,7 @@ const appClass = computed(() => {
         <a href="https://frontend.im/" target="_blank">Tusko Trush</a>
       </p>
       <slot v-if="!src.isChrome">
-        <gitBtns />
+        <gitBtnsVue />
         <a
           href="https://chrome.google.com/webstore/detail/bgjbahmkflngdopgjifphcpepapgohca"
           class="chrome-webstore-link"
@@ -42,4 +46,4 @@ const appClass = computed(() => {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 </style>
-<style src="./styles/main.scss" lang="scss"></style>
+<style src="./assets/main.scss" lang="scss"></style>

@@ -1,4 +1,43 @@
-@import "components/_mixins", "components/reset";
+:root {
+  --font: "Raleway", "Arial", sans-serif;
+  --font-base: 15px;
+
+  --container: 640px;
+
+  --background: #00bcd4;
+  --background-lighten: rgba(#00bcd4, 0.5);
+  --disabled: #d9dadc;
+  --color: #333;
+  --color-lighten: rgba(#333, 0.5);
+  --light: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // --background-color: #00bcd4;
+    // --disabled: #d9dadc;
+    --color: #fff;
+    --light: #333;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  min-width: 1px; //flexbox fix for Firefox
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin-bottom: 20px;
+}
 
 html {
   font: 400 var(--font-base) / 1.4 var(--font);
@@ -7,17 +46,19 @@ html {
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
   > body {
-    @extend %justifycontentcenter;
-    @extend %flexdirectioncolumn;
-    @extend %alignitemscenter;
-    @extend %flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    min-height: 100vh;
+    margin: 0 auto;
+
     background-color: var(--background);
     background: Highlight;
     color: var(--color);
     font-family: inherit;
     position: relative;
-    min-height: 100vh;
-    margin: 0 auto;
   }
 }
 
@@ -79,6 +120,7 @@ form {
   color: var(--light);
   padding: 10px 20px;
   font-size: 15px;
+  cursor: pointer;
   line-height: 1;
   &.smaller {
     border-color: var(--disabled);
@@ -99,12 +141,19 @@ form {
   }
 }
 
-.number-input__button:hover::after,
-.number-input__button:hover::before {
-  background: Highlight !important;
-}
-.number-input__input:focus {
-  border-color: Highlight !important;
+.vue-number-input {
+  &__button {
+    &:hover {
+      cursor: pointer;
+      &::before,
+      &::after {
+        background: Highlight !important;
+      }
+    }
+  }
+  &__input:focus {
+    border-color: Highlight !important;
+  }
 }
 
 .copyright {

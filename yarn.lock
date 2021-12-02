@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.16.4.tgz#d5f92f57cf2c74ffe9b37981c0e72fee7311372e"
   integrity sha512-6V0qdPUaiVHH3RtZeLIsc+6pDhbYzHR8ogA8w+f+Wc77DuXto19g2QUwveINoS34Uw+W8/hQDGJCx+i4n7xcng==
 
+"@chenfengyuan/vue-number-input@^2.0.0-rc":
+  version "2.0.0-rc"
+  resolved "https://registry.yarnpkg.com/@chenfengyuan/vue-number-input/-/vue-number-input-2.0.0-rc.tgz#4ac90bd5259a86b98e8a01c1b96bebfcfab752c8"
+  integrity sha512-icOSZqheB6uG0m5pBShy2+Bf82LvE2scb8GBNREnjiD/RJLXWuM6IrngW8VggfkFkBCI/+Z/taJmuqvyZUo3yw==
+
 "@vitejs/plugin-vue@^1.9.3":
   version "1.10.1"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-1.10.1.tgz#d140e93d574c5eac247a79f5b15df665dcb7635b"
@@ -137,6 +142,15 @@ braces@~3.0.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
+clipboard@^2.0.6:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.8.tgz#ffc6c103dd2967a83005f3f61976aa4655a4cdba"
+  integrity sha512-Y6WO0unAIQp5bLmk1zdThRhgJt/x3ks6f30s3oE3H1mgIEU33XyQjEf8gsf6DxC7NPX8Y1SsNWjUjL/ywLnnbQ==
+  dependencies:
+    good-listener "^1.2.2"
+    select "^1.1.2"
+    tiny-emitter "^2.0.0"
+
 core-util-is@~1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.3.tgz#a6042d3634c2b27e9328f837b965fac83808db85"
@@ -146,6 +160,11 @@ csstype@^2.6.8:
   version "2.6.19"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.19.tgz#feeb5aae89020bb389e1f63669a5ed490e391caa"
   integrity sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==
+
+delegate@^3.1.2:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
+  integrity sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
 
 esbuild-android-arm64@0.13.15:
   version "0.13.15"
@@ -283,6 +302,13 @@ glob-parent@~5.1.2:
   integrity sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==
   dependencies:
     is-glob "^4.0.1"
+
+good-listener@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
+  integrity sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
+  dependencies:
+    delegate "^3.1.2"
 
 has@^1.0.3:
   version "1.0.3"
@@ -458,6 +484,11 @@ sass@^1.44.0:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
 
+select@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
+  integrity sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
+
 set-immediate-shim@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/set-immediate-shim/-/set-immediate-shim-1.0.1.tgz#4b2b1b27eb808a9f8dcc481a58e5e56f599f3f61"
@@ -484,6 +515,11 @@ string_decoder@~1.1.1:
   integrity sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==
   dependencies:
     safe-buffer "~5.1.0"
+
+tiny-emitter@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
+  integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
 
 to-regex-range@^5.0.1:
   version "5.0.1"
@@ -515,6 +551,13 @@ vite@^2.6.4:
     rollup "^2.57.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vue3-clipboard@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue3-clipboard/-/vue3-clipboard-1.0.0.tgz#f7d17a00bce6579ba866df825541563b272610f2"
+  integrity sha512-GUqKh1oO79xDpq0z+cCv/NDVTpcJGNDzeNgT3PmTdTp/WJh3gcTrDqIYKycKhzMFOtIFJ7hO/+usgyWtT+fNhA==
+  dependencies:
+    clipboard "^2.0.6"
 
 vue@^3.2.16:
   version "3.2.23"
