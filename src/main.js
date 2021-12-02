@@ -37,8 +37,8 @@ new Vue({
   },
   mounted() {
     if (
-      process.env.NODE_ENV !== "development" ||
-      location.search === "?test=ga"
+      !process.env.VUE_APP_IS_CHROME &&
+      (process.env.NODE_ENV !== "development" || location.search === "?test=ga")
     ) {
       this.$loadScript("https://www.google-analytics.com/analytics.js")
         .then(() => {

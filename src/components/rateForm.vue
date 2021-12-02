@@ -74,10 +74,10 @@ export default {
     form: {
       rate: 0,
       h: 0,
-      m: 0
+      m: 0,
     },
     convertToUAH: false,
-    exchange: null
+    exchange: null,
   }),
   created() {
     if (!isEmpty(this.$route.query) && !process.env.VUE_APP_IS_CHROME) {
@@ -93,8 +93,8 @@ export default {
       this.exchange = JSON.parse(privat24Exchange);
     } else {
       fetch("https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5")
-        .then(r => r.json())
-        .then(json => {
+        .then((r) => r.json())
+        .then((json) => {
           this.exchange = json;
           sessionStorage.setItem("exchange", JSON.stringify(json));
         });
@@ -115,12 +115,12 @@ export default {
     shareURL() {
       let params = new URLSearchParams(this.form).toString();
       return `https://hourlyrate.frontend.im/?${params}`;
-    }
+    },
   },
   methods: {
     copiedUrl() {
       alert(`Copied to clipboard: ${this.shareURL}`);
-    }
+    },
   },
   watch: {
     form: {
@@ -130,21 +130,17 @@ export default {
         if (!process.env.VUE_APP_IS_CHROME)
           this.$router
             .replace({
-              query: v
+              query: v,
             })
-            .catch(err => {});
-      }
+            .catch((err) => {});
+      },
     },
-    "form.rate": debounce(function(rate) {
+    "form.rate": debounce(function (rate) {
       wait4GA()
-        .then(w4ga =>
-          w4ga("send", "event", "input", "price", rate, {
-            nonInteraction: true
-          })
-        )
-        .catch(e => console.warn(e));
-    }, 1000)
-  }
+        .then((w4ga) => w4ga.push(["_trackEvent", "price", rate]))
+        .catch((e) => console.warn(e));
+    }, 1e3),
+  },
 };
 </script>
 
