@@ -3,7 +3,7 @@ import { computed, ref } from "vue";
 const src = ref({
   name: "hourlyrate",
   desc: "Convert your hours to dollars",
-  isChrome: import.meta.env.VITE_APP_IS_CHROME,
+  isChrome: process.env.VITE_APP_IS_CHROME,
 });
 const appClass = computed(() => {
   const cond = src.value.isChrome ? "chrome" : "browser";
@@ -14,8 +14,8 @@ const appClass = computed(() => {
 <template>
   <div id="app" :class="appClass">
     <section>
-      <h1>{{ src.name }}</h1>
-      <h2>{{ src.desc }}</h2>
+      <h1>{{ appName }}</h1>
+      <h2>{{ appDescr }}</h2>
       <rateForm />
     </section>
     <div class="copyright">
@@ -23,7 +23,7 @@ const appClass = computed(() => {
         &copy; {{ new Date().getFullYear() }} by
         <a href="https://frontend.im/" target="_blank">Tusko Trush</a>
       </p>
-      <slot v-if="!src.isChrome">
+      <slot v-if="!isChrome">
         <gitBtns />
         <a
           href="https://chrome.google.com/webstore/detail/bgjbahmkflngdopgjifphcpepapgohca"
@@ -42,4 +42,3 @@ const appClass = computed(() => {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 </style>
-<style src="./styles/main.scss" lang="scss"></style>
