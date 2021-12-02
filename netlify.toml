@@ -3,9 +3,3 @@
   to = "https://hourlyrate.frontend.im/:splat"
   status = 301
   force = true
-
-#[[redirects]]
-#  from = "https://hourlyrate.frontend.im/*"
-#  to = "https://hourlyrate.frontend.im/:splat"
-#  status = 301
-#  force = true
