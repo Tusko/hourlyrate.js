@@ -1,8 +1,10 @@
 <script setup>
 import { computed, ref } from "vue";
 
-import rateFormVue from "./components/rateForm.vue";
+import formVue from "./components/form.vue";
 import gitBtnsVue from "./components/gitBtns.vue";
+
+console.log(import.meta.env);
 
 const src = ref({
   name: "hourlyrate",
@@ -20,7 +22,7 @@ const appClass = computed(() => {
     <section>
       <h1>{{ src.name }}</h1>
       <h2>{{ src.desc }}</h2>
-      <rateFormVue />
+      <formVue />
     </section>
     <div class="copyright">
       <p>
