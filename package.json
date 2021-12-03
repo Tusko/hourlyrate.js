@@ -17,8 +17,8 @@
   "author": "Tusko Trush <tusko@trush.email>",
   "private": true,
   "scripts": {
-    "dev:web": "vite preview",
-    "dev:chrome": "vite preview --mode chrome",
+    "dev:web": "vite",
+    "dev:chrome": "vite --mode chrome",
     "build:web": "vite build",
     "build:chrome": "vite build --mode chrome",
     "serve": "vite preview"

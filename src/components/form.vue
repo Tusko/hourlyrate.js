@@ -80,7 +80,7 @@ export default {
     onBeforeMount(() => {
       if (
         window.location.search.length &&
-        !import.meta.env.VITE_APP_IS_CHROME
+        !+import.meta.env.VITE_APP_IS_CHROME
       ) {
         const formObj = location.search
           .slice(1)
@@ -89,9 +89,6 @@ export default {
           .forEach(([key, val]) => {
             form[key] = +val;
           });
-        //   ((obj, [key, value]) => ({ ...obj, [key]: value }), {});
-        // console.log(formObj);
-        // form = formObj;
       }
     });
 

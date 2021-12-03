@@ -3,7 +3,7 @@ import { computed, ref } from "vue";
 const src = ref({
   name: "hourlyrate",
   desc: "Convert your hours to dollars",
-  isChrome: process.env.VITE_APP_IS_CHROME,
+  isChrome: +import.meta.env.VITE_APP_IS_CHROME,
 });
 const appClass = computed(() => {
   const cond = src.value.isChrome ? "chrome" : "browser";
