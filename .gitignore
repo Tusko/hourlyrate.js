@@ -124,10 +124,10 @@ typings/
 # Recommended template: Node.gitignore
 
 ./dist
-./dist_chrome
+./dist-chrome
 dist/*
-dist_chrome/*
-dist_chrome.*
+dist-chrome/*
+dist-chrome.*
 npm-debug.log
 yarn-error.log
 

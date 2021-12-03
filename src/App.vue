@@ -7,7 +7,7 @@ import gitBtnsVue from "./components/gitBtns.vue";
 const src = ref({
   name: "hourlyrate",
   desc: "Convert your hours to dollars",
-  isChrome: +import.meta.env.VITE_APP_IS_CHROME,
+  isChrome: +import.meta.env.VITE_APP_IS_CHROME
 });
 const appClass = computed(() => {
   const cond = src.value.isChrome ? "chrome" : "browser";

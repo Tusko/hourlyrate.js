@@ -1,6 +1,7 @@
 import {defineConfig, loadEnv} from 'vite'
 import vue from '@vitejs/plugin-vue'
-import AutoZip from 'vite-plugin-auto-zip'
+import zip from 'rollup-plugin-zip'
+import copy from 'rollup-plugin-copy'
 const path = require('path');
 
 export default ({mode}) => {
@@ -13,12 +14,22 @@ export default ({mode}) => {
       },
     },
   };
-  console.log(process.env.VITE_APP_IS_CHROME)
+
   if (+process.env.VITE_APP_IS_CHROME) {
+    console.log('prepare Chrome extension build')
     config.build = {
       outDir: './dist-chrome'
     }
-    config.plugins.push(AutoZip('./dist-chrome'))
+    config.plugins.push(
+      copy({
+        targets: [
+          {src: 'public-chrome/*', dest: 'dist-chrome'},
+        ],
+        verbose: true,
+        hook: 'writeBundle'
+      })
+    )
+    config.plugins.push(zip())
   }
 
   return defineConfig(config)
