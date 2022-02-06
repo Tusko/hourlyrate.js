@@ -29,7 +29,9 @@ export default ({mode}) => {
         hook: 'writeBundle'
       })
     )
-    config.plugins.push(zip())
+    config.plugins.push(zip({
+      dir: 'dist-chrome'
+    }))
   }
 
   return defineConfig(config)
