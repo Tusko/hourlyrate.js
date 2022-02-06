@@ -127,9 +127,6 @@ typings/
 ./dist-chrome
 dist/*
 dist-chrome/*
-dist-chrome.*
-npm-debug.log
-yarn-error.log
 
 ### VisualStudio ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -479,5 +476,3 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
-
-# End of https://www.gitignore.io/api/node,vuejs,macos,visualstudio
