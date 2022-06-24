@@ -4,10 +4,10 @@
 
 Website: https://hourlyrate.frontend.im or
 
-Available in  [![Chrome extension](https://img.shields.io/chrome-web-store/v/bgjbahmkflngdopgjifphcpepapgohca.svg)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
- [![Chrome extension](https://badgen.net/chrome-web-store/users/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
- [![Chrome extension](https://badgen.net/chrome-web-store/stars/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
- [![Chrome extension](https://badgen.net/chrome-web-store/rating/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+Available in  [![Chrome extension](https://flat.badgen.net/chrome-web-store/v/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+ [![Chrome extension](https://flat.badgen.net/chrome-web-store/users/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+ [![Chrome extension](https://flat.badgen.net/chrome-web-store/stars/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+ [![Chrome extension](https://flat.badgen.net/chrome-web-store/rating/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
 
 
 
