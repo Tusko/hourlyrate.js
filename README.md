@@ -1,7 +1,28 @@
-# Vue 3 + Vite
+# hourlyrate
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### Helps you to convert your hours to dollars.
 
-## Recommended IDE Setup
+Website: https://hourlyrate.frontend.im or
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+Available in  [![Chrome extension](https://img.shields.io/chrome-web-store/v/bgjbahmkflngdopgjifphcpepapgohca.svg)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+
+
+[![Chrome extension](https://badgen.net/chrome-web-store/users/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+ [![Chrome extension](https://badgen.net/chrome-web-store/stars/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+ [![Chrome extension](https://badgen.net/chrome-web-store/rating/bgjbahmkflngdopgjifphcpepapgohca)](https://chrome.google.com/webstore/detail/hourlyrate/bgjbahmkflngdopgjifphcpepapgohca)
+
+
+
+---
+
+## Webapp build
+
+To build app run `yarn run build`
+
+---
+
+## Chrome build
+
+To build Chrome extension run `yarn run chrome`
+
+---
