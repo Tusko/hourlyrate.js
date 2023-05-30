@@ -92,15 +92,15 @@ export default {
       }
     });
 
-    const monoExhange = sessionStorage.getItem("exchange");
-    if (monoExhange) {
-      exchange.value = JSON.parse(monoExhange);
+    const privat24Exchange = sessionStorage.getItem("exchange");
+    if (privat24Exchange) {
+      exchange.value = JSON.parse(privat24Exchange);
     } else {
-      fetch("https://api.monobank.ua/bank/currency")
+      fetch("https://proxy.frontend.im/?csurl=https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5")
         .then((r) => r.json())
-        .then(([firstItem]) => {
-          exchange.value = firstItem;
-          sessionStorage.setItem("exchange", JSON.stringify(firstItem));
+        .then(([_, usd]) => {
+          exchange.value = usd;
+          sessionStorage.setItem("exchange", JSON.stringify(usd));
         })
         .catch(window.alert);
     }
@@ -111,7 +111,7 @@ export default {
       return !isNaN(totals) ? totals.toFixed(2) : 0;
     });
     const calcTotalUAH = computed(() => {
-      const totalsUAH = calcTotal.value * +exchange.value.rateSell;
+      const totalsUAH = calcTotal.value * +exchange.value.sale;
       return !isNaN(totalsUAH) ? totalsUAH.toFixed(2) : 0;
     });
 
