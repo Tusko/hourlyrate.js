@@ -63,7 +63,14 @@ html {
 }
 
 #app {
-  max-width: 100%;
+  .chrome-app {
+    min-width: 720px;
+    padding: 40px 0 0;
+  }
+}
+
+.is-chrome-app {
+  min-width: 720px;
 }
 
 h1 {
@@ -90,9 +97,6 @@ section {
   max-width: 100%;
   padding: 40px;
   z-index: 0;
-  .chrome-app & {
-    margin-bottom: 0;
-  }
   @media screen and (max-width: 767px) {
     margin-bottom: 20px;
     padding: 20px;

@@ -9,14 +9,20 @@ const src = ref({
   desc: "Convert your hours to dollars",
   isChrome: +import.meta.env.VITE_APP_IS_CHROME
 });
+
 const appClass = computed(() => {
   const cond = src.value.isChrome ? "chrome" : "browser";
   return `${cond}-app`;
 });
+
+if (src.value.isChrome) {
+  document.body.classList.add("is-chrome-app");
+}
+
 </script>
 
 <template>
-  <div id="app" :class="appClass">
+  <div :class="appClass">
     <section>
       <h1>{{ src.name }}</h1>
       <h2>{{ src.desc }}</h2>
